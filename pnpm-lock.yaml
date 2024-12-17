@@ -14,6 +14,9 @@ importers:
       '@solid-primitives/set':
         specifier: ^0.4.11
         version: 0.4.11(solid-js@1.8.17)
+      '@upryzing/api':
+        specifier: 0.1.0
+        version: 0.1.0
       eventemitter3:
         specifier: ^5.0.1
         version: 5.0.1
@@ -362,6 +365,9 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@upryzing/api@0.1.0':
+    resolution: {integrity: sha512-dZ2eX/1fETlBoUQEpYuN5Yot+9YqlRscRPFomxO8sBD0An+LdYmhdaDWf0/ga/RFTOUaDL96GyOn7yPeEbegIw==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1555,6 +1561,13 @@ snapshots:
       eslint-visitor-keys: 3.4.0
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@upryzing/api@0.1.0':
+    dependencies:
+      axios: 0.26.1
+      lodash.defaultsdeep: 4.6.1
+    transitivePeerDependencies:
+      - debug
 
   acorn-jsx@5.3.2(acorn@8.11.3):
     dependencies:
