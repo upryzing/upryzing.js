@@ -1,16 +1,16 @@
-# revolt.js
+# upryzing.js
 
-![revolt.js](https://img.shields.io/npm/v/revolt.js) ![revolt-api](https://img.shields.io/npm/v/revolt-api?label=Revolt%20API)
+![@upryzing/upryzing.js](https://img.shields.io/npm/v/@upryzing/upryzing.js) ![@upryzing/api](https://img.shields.io/npm/v/@upryzing/api)
 
-**revolt.js** is a JavaScript library for interacting with the entire Revolt API.
+**upryzing.js** is a JavaScript library for interacting with the entire Revolt API.
 
 ## Example Usage
 
 ```javascript
 // esm / typescript
-import { Client } from "revolt.js";
+import { Client } from "@upryzing/upryzing.js";
 // ...or commonjs
-const { Client } = require("revolt.js");
+const { Client } = require("upryzing/upryzing.js");
 
 let client = new Client();
 
@@ -42,15 +42,15 @@ function MyApp() {
 }
 ```
 
-## Revolt API Types
+## Upryzing API Types
 
 > [!WARNING]
-> It is advised you do not use this unless necessary. If you find somewhere that isn't covered by the library, please open an issue as this library aims to transform all objects.
+> It is advised that you **do not use this** unless necessary. If you find something that isn't covered by the library, please open an issue as this library aims to transform all objects.
 
-All `revolt-api` types are re-exported from this library under `API`.
+All `@uprzying/api` types are re-exported from this library under the `API` object.
 
 ```typescript
-import { API } from "revolt.js";
+import { API } from "@upryzing/upryzing.js";
 
 // API.Channel;
 // API.[..];

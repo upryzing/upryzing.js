@@ -157,7 +157,7 @@ export type ClientOptions = Partial<EventClientOptions> & {
 };
 
 /**
- * Revolt.js Clients
+ * upryzing.js Clients
  */
 export class Client extends EventEmitter<Events> {
   readonly account;
@@ -188,13 +188,13 @@ export class Client extends EventEmitter<Events> {
   #reconnectTimeout: number | undefined;
 
   /**
-   * Create Revolt.js Client
+   * Create an upryzing.js client
    */
   constructor(options?: Partial<ClientOptions>, configuration?: RevoltConfig) {
     super();
 
     this.options = {
-      baseURL: "https://api.revolt.chat",
+      baseURL: "https://web.upryzing.app/api",
       partials: false,
       eagerFetching: true,
       syncUnreads: false,
@@ -294,7 +294,7 @@ export class Client extends EventEmitter<Events> {
     this.events.disconnect();
     this.#setReady(false);
     this.events.connect(
-      this.configuration?.ws ?? "wss://ws.revolt.chat",
+      this.configuration?.ws ?? "wss://web.upryzing.app/ws",
       typeof this.#session === "string" ? this.#session : this.#session!.token
     );
   }
