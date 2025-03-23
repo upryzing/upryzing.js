@@ -1,4 +1,4 @@
-import { Accessor, createSignal, Setter } from "solid-js";
+import { Accessor, Setter, createSignal } from "solid-js";
 
 import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
 import { Error } from "revolt-api";
@@ -56,10 +56,9 @@ type Events<T extends AvailableProtocols, P extends EventProtocol<T>> = {
 /**
  * Simple wrapper around the Revolt websocket service.
  */
-export class EventClient<T extends AvailableProtocols>
-  extends AsyncEventEmitter<
-    Events<T, EventProtocol<T>>
-  > {
+export class EventClient<
+  T extends AvailableProtocols
+> extends AsyncEventEmitter<Events<T, EventProtocol<T>>> {
   readonly options: EventClientOptions;
 
   #protocolVersion: T;
@@ -77,7 +76,7 @@ export class EventClient<T extends AvailableProtocols>
   #connectTimeoutReference: number | undefined;
 
   #lastError: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    { type: "socket"; data: any } | { type: "revolt"; data: Error } | undefined;
+  { type: "socket"; data: any } | { type: "revolt"; data: Error } | undefined;
 
   /**
    * Create a new event client.
@@ -88,7 +87,7 @@ export class EventClient<T extends AvailableProtocols>
   constructor(
     protocolVersion: T,
     transportFormat: "json" = "json",
-    options?: Partial<EventClientOptions>,
+    options?: Partial<EventClientOptions>
   ) {
     super();
 
@@ -135,11 +134,13 @@ export class EventClient<T extends AvailableProtocols>
 
     this.#connectTimeoutReference = setTimeout(
       () => this.disconnect(),
-      this.options.pongTimeout * 1e3,
+      this.options.pongTimeout * 1e3
     ) as never;
 
     this.#socket = new WebSocket(
-      `${uri}?version=${this.#protocolVersion}&format=${this.#transportFormat}&token=${token}`,
+      `${uri}?version=${this.#protocolVersion}&format=${
+        this.#transportFormat
+      }&token=${token}`
     );
 
     this.#socket.onopen = () => {
@@ -147,7 +148,7 @@ export class EventClient<T extends AvailableProtocols>
         this.send({ type: "Ping", data: +new Date() });
         this.#pongTimeoutReference = setTimeout(
           () => this.disconnect(),
-          this.options.pongTimeout * 1e3,
+          this.options.pongTimeout * 1e3
         ) as never;
       }, this.options.heartbeatInterval * 1e3) as never;
     };
@@ -247,7 +248,9 @@ export class EventClient<T extends AvailableProtocols>
         }
         break;
       default:
-        throw `Unreachable code. Received ${event.type} in state ${this.state()}.`;
+        throw `Unreachable code. Received ${
+          event.type
+        } in state ${this.state()}.`;
     }
   }
 

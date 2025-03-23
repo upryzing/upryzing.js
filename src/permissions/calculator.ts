@@ -31,7 +31,7 @@ export function calculatePermission(
      * Pretend to be another ServerMember
      */
     member?: ServerMember;
-  },
+  }
 ): number {
   const user = options?.member ? options?.member.user : client.user;
   if (user?.privileged) {
@@ -59,11 +59,11 @@ export function calculatePermission(
       if (member.roles && target.roles) {
         // 5. Apply allows and denies from roles.
         const permissions = member.orderedRoles.map(
-          (role) => role.permissions ?? { a: 0, d: 0 },
+          (role) => role.permissions ?? { a: 0, d: 0 }
         );
 
         for (const permission of permissions) {
-          perm = (perm | BigInt(permission.a)) & (~BigInt(permission.d));
+          perm = (perm | BigInt(permission.a)) & ~BigInt(permission.d);
         }
       }
 
@@ -119,14 +119,13 @@ export function calculatePermission(
           if (!member) return 0;
 
           // 5. Calculate server base permissions.
-          let perm = BigInt(
-            calculatePermission(client, server, options),
-          );
+          let perm = BigInt(calculatePermission(client, server, options));
 
           // 6. Apply default allows and denies for channel.
           if (target.defaultPermissions) {
-            perm = (perm | BigInt(target.defaultPermissions.a)) &
-              (~BigInt(target.defaultPermissions.d));
+            perm =
+              (perm | BigInt(target.defaultPermissions.a)) &
+              ~BigInt(target.defaultPermissions.d);
           }
 
           // 7. If user has roles, iterate in order.
@@ -137,7 +136,7 @@ export function calculatePermission(
             for (const id of roles) {
               const override = target.rolePermissions[id];
               if (override) {
-                perm = (perm & BigInt(override.a)) & (~BigInt(override.d));
+                perm = perm & BigInt(override.a) & ~BigInt(override.d);
               }
             }
           }
