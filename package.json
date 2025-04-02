@@ -47,7 +47,7 @@
     "eslint-plugin-spellcheck": "^0.0.20",
     "prettier": "^2.8.8",
     "tsc-watch": "^6.0.4",
-    "typedoc": "^0.25.1",
+    "typedoc": "^0.28.1",
     "typescript": "^5.4.2"
   }
 }
