@@ -15,8 +15,8 @@ importers:
         specifier: ^0.4.11
         version: 0.4.11(solid-js@1.8.17)
       '@upryzing/api':
-        specifier: 0.1.0
-        version: 0.1.0
+        specifier: 0.1.1
+        version: 0.1.1
       '@vladfrangu/async_event_emitter':
         specifier: ^2.4.6
         version: 2.4.6
@@ -372,8 +372,8 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@upryzing/api@0.1.0':
-    resolution: {integrity: sha512-dZ2eX/1fETlBoUQEpYuN5Yot+9YqlRscRPFomxO8sBD0An+LdYmhdaDWf0/ga/RFTOUaDL96GyOn7yPeEbegIw==}
+  '@upryzing/api@0.1.1':
+    resolution: {integrity: sha512-wsr6ewE6qxnBTjUJse74Mjze50Oq0NEZYzYr1azjpB8fWI9jNkqGsfPF83RlgTdQXyKz5TolfZJyFORE5JFwfg==}
 
   '@vladfrangu/async_event_emitter@2.4.6':
     resolution: {integrity: sha512-RaI5qZo6D2CVS6sTHFKg1v5Ohq/+Bo2LZ5gzUEwZ/WkHhwtGTCB/sVLw8ijOkAUxasZ+WshN/Rzj4ywsABJ5ZA==}
@@ -1576,7 +1576,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@upryzing/api@0.1.0':
+  '@upryzing/api@0.1.1':
     dependencies:
       axios: 0.26.1
       lodash.defaultsdeep: 4.6.1
