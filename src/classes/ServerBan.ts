@@ -2,7 +2,7 @@ import {
   BannedUser as ApiBannedUser,
   ServerBan as ApiServerBan,
   MemberCompositeKey,
-} from "revolt-api";
+} from "@upryzing/api";
 
 import { BannedUser, Client } from "../index.js";
 

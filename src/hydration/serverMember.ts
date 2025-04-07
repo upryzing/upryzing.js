@@ -1,4 +1,4 @@
-import { Member as ApiMember, MemberCompositeKey } from "revolt-api";
+import { Member as ApiMember, MemberCompositeKey } from "@upryzing/api";
 
 import { Client, File } from "../index.js";
 import type { Merge } from "../lib/merge.js";

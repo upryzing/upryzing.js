@@ -1,4 +1,4 @@
-import { DataEditBot } from "revolt-api";
+import { DataEditBot } from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import { BotCollection } from "../collections/index.js";

@@ -3,7 +3,7 @@ import {
   BotInformation,
   RelationshipStatus,
   UserStatus,
-} from "revolt-api";
+} from "@upryzing/api";
 
 import { Client, File } from "../index.js";
 
@@ -14,6 +14,7 @@ export type HydratedUser = {
   username: string;
   discriminator: string;
   displayName?: string;
+  pronouns?: string[];
   relationship: RelationshipStatus;
 
   online: boolean;
@@ -37,6 +38,7 @@ export const userHydration: Hydrate<ApiUser, HydratedUser> = {
     username: (user) => user.username,
     discriminator: (user) => user.discriminator,
     displayName: (user) => user.display_name!,
+    pronouns: (user) => user.pronouns!,
     relationship: (user) => user.relationship!,
 
     online: (user) => user.online!,

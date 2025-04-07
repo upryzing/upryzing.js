@@ -5,7 +5,7 @@ import {
   MFAResponse,
   MultiFactorStatus,
   MFATicket as TicketType,
-} from "revolt-api";
+} from "@upryzing/api";
 
 import { Client } from "../index.js";
 

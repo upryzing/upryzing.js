@@ -1,4 +1,4 @@
-import { Bot as ApiBot } from "revolt-api";
+import { Bot as ApiBot } from "@upryzing/api";
 
 import { Hydrate } from "./index.js";
 

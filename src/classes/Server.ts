@@ -10,7 +10,7 @@ import type {
   DataEditRole,
   DataEditServer,
   Override,
-} from "revolt-api";
+} from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import { ServerCollection } from "../collections/index.js";

@@ -2,7 +2,7 @@ import type {
   DataBanCreate,
   DataMemberEdit,
   MemberCompositeKey,
-} from "revolt-api";
+} from "@upryzing/api";
 
 import { ServerMemberCollection } from "../collections/index.js";
 import {

@@ -8,7 +8,7 @@ import type {
   DataMessageSearch,
   DataMessageSend,
   Override,
-} from "revolt-api";
+} from "@upryzing/api";
 import { APIRoutes } from "revolt-api/dist/routes";
 import { decodeTime, ulid } from "ulid";
 

@@ -2,7 +2,7 @@ import {
   MessageWebhook as ApiMessageWebhook,
   DataEditMessage,
   DataMessageSend,
-} from "revolt-api";
+} from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import { MessageCollection } from "../collections/index.js";

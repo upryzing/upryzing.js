@@ -1,6 +1,6 @@
 import { batch } from "solid-js";
 
-import { OwnedBotsResponse } from "revolt-api";
+import { OwnedBotsResponse } from "@upryzing/api";
 
 import { HydratedBot } from "../hydration/bot.js";
 import { API, Bot, PublicBot } from "../index.js";

@@ -16,7 +16,7 @@ import type {
   Role,
   Server,
   User,
-} from "revolt-api";
+} from "@upryzing/api";
 
 import { hydrate } from "../hydration/index.js";
 import { Client, MessageEmbed } from "../index.js";

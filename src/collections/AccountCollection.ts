@@ -1,4 +1,4 @@
-import { DataCreateAccount, WebPushSubscription } from "revolt-api";
+import { DataCreateAccount, WebPushSubscription } from "@upryzing/api";
 
 import { MFA } from "../classes/MFA.js";
 import { Client } from "../index.js";

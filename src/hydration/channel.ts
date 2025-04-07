@@ -1,5 +1,5 @@
 import { ReactiveSet } from "@solid-primitives/set";
-import { Channel as ApiChannel, OverrideField } from "revolt-api";
+import { Channel as ApiChannel, OverrideField } from "@upryzing/api";
 
 import { Client, File } from "../index.js";
 import type { Merge } from "../lib/merge.js";

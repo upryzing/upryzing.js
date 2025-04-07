@@ -1,8 +1,8 @@
 import { Accessor, Setter, batch, createSignal } from "solid-js";
 
 import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
-import type { DataLogin, RevoltConfig } from "revolt-api";
-import { API, Role } from "revolt-api";
+import type { DataLogin, RevoltConfig } from "@upryzing/api";
+import { API, Role } from "@upryzing/api";
 
 import {
   Channel,
@@ -395,9 +395,9 @@ export class Client extends AsyncEventEmitter<Events> {
    * @returns Proxied media URL
    */
   proxyFile(url: string): string | undefined {
-    if (this.configuration?.features.january.enabled) {
+    if (this.configuration?.features.dove.enabled) {
       return `${
-        this.configuration.features.january.url
+        this.configuration.features.dove.url
       }/proxy?url=${encodeURIComponent(url)}`;
     } else {
       return url;

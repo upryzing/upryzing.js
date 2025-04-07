@@ -1,4 +1,4 @@
-import { Metadata } from "revolt-api";
+import { Metadata } from "@upryzing/api";
 
 import { API, Client } from "../index.js";
 
@@ -60,7 +60,7 @@ export class File {
    * Direct URL to the file
    */
   get url() {
-    return `${this.#client.configuration?.features.autumn.url}/${this.tag}/${
+    return `${this.#client.configuration?.features.pigeon.url}/${this.tag}/${
       this.id
     }/${this.filename}`;
   }
@@ -69,7 +69,7 @@ export class File {
    * Download URL for the file
    */
   get downloadURL() {
-    return `${this.#client.configuration?.features.autumn.url}/${
+    return `${this.#client.configuration?.features.pigeon.url}/${
       this.tag
     }/download/${this.id}/${this.filename}`;
   }
@@ -102,7 +102,7 @@ export class File {
    * @returns Generated URL or nothing
    */
   createFileURL(forceAnimation?: boolean) {
-    const autumn = this.#client.configuration?.features.autumn;
+    const autumn = this.#client.configuration?.features.pigeon;
     if (!autumn?.enabled) return;
 
     let query = "";

@@ -5,7 +5,7 @@ import {
   Category,
   Role,
   SystemMessageChannels,
-} from "revolt-api";
+} from "@upryzing/api";
 
 import { Client, File } from "../index.js";
 

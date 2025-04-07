@@ -1,6 +1,6 @@
 {
   "name": "@upryzing/upryzing.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -30,7 +30,6 @@
     "@solid-primitives/set": "^0.4.11",
     "@upryzing/api": "0.1.1",
     "@vladfrangu/async_event_emitter": "^2.4.6",
-    "revolt-api": "0.7.16",
     "solid-js": "^1.8.15",
     "ulid": "^2.3.0"
   },

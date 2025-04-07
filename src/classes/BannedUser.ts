@@ -1,4 +1,4 @@
-import { BannedUser as ApiBannedUser } from "revolt-api";
+import { BannedUser as ApiBannedUser } from "@upryzing/api";
 
 import { Client, File } from "../index.js";
 

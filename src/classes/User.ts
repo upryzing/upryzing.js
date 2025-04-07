@@ -1,4 +1,4 @@
-import { DataEditUser, Presence } from "revolt-api";
+import { DataEditUser, Presence } from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import { UserCollection } from "../collections/index.js";
@@ -66,6 +66,13 @@ export class User {
       this.#collection.getUnderlyingObject(this.id).displayName ??
       this.#collection.getUnderlyingObject(this.id).username
     );
+  }
+
+  /**
+   * User pronouns
+   */
+  get pronouns() {
+    return this.#collection.getUnderlyingObject(this.id).pronouns;
   }
 
   /**

@@ -1,4 +1,4 @@
-import { Emoji as ApiEmoji, EmojiParent } from "revolt-api";
+import { Emoji as ApiEmoji, EmojiParent } from "@upryzing/api";
 
 import type { Merge } from "../lib/merge.js";
 
