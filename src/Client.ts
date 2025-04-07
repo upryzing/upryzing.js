@@ -1,8 +1,8 @@
 import { Accessor, Setter, batch, createSignal } from "solid-js";
 
-import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
 import type { DataLogin, RevoltConfig } from "@upryzing/api";
 import { API, Role } from "@upryzing/api";
+import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
 
 import {
   Channel,

@@ -1,7 +1,7 @@
 import { Accessor, Setter, createSignal } from "solid-js";
 
-import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
 import { Error } from "@upryzing/api";
+import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
 
 import type { AvailableProtocols, EventProtocol } from "./index.js";
 
