@@ -9,7 +9,7 @@ import type {
   DataMessageSend,
   Override,
 } from "@upryzing/api";
-import { APIRoutes } from "revolt-api/dist/routes";
+import { APIRoutes } from "@upryzing/api/dist/routes";
 import { decodeTime, ulid } from "ulid";
 
 import { ChannelCollection } from "../collections/index.js";
