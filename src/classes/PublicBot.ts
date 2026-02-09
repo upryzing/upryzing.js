@@ -1,4 +1,4 @@
-import type { File as APIFile, PublicBot as APIPublicBot } from "stoat-api";
+import type { File as APIFile, PublicBot as APIPublicBot } from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 

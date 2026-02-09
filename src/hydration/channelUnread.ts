@@ -1,5 +1,5 @@
 import { ReactiveSet } from "@solid-primitives/set";
-import type { ChannelUnread } from "stoat-api";
+import type { ChannelUnread } from "@upryzing/api";
 
 import type { Merge } from "../lib/merge.js";
 

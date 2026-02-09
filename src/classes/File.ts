@@ -1,4 +1,4 @@
-import type { File as APIFile, Metadata } from "stoat-api";
+import type { File as APIFile, Metadata } from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 
@@ -62,7 +62,7 @@ export class File {
   // get url(): string {
   //   if (!this.filename) return this.previewUrl;
   //
-  //   return `${this.#client.configuration?.features.autumn.url}/${this.tag}/${
+  //   return `${this.#client.configuration?.features.pigeon.url}/${this.tag}/${
   //     this.id
   //   }/${this.filename}`;
   // }
@@ -71,7 +71,7 @@ export class File {
    * Preview URL for the file
    */
   get previewUrl(): string {
-    return `${this.#client.configuration?.features.autumn.url}/${
+    return `${this.#client.configuration?.features.pigeon.url}/${
       this.tag
     }/${this.id}`;
   }
@@ -80,7 +80,7 @@ export class File {
    * Original download URL for the file
    */
   get originalUrl(): string {
-    return `${this.#client.configuration?.features.autumn.url}/${
+    return `${this.#client.configuration?.features.pigeon.url}/${
       this.tag
     }/${this.id}/original`;
   }
@@ -113,14 +113,14 @@ export class File {
    * @returns Generated URL or nothing
    */
   createFileURL(forceAnimation?: boolean): string | undefined {
-    const autumn = this.#client.configuration?.features.autumn;
-    if (!autumn?.enabled) return;
+    const pigeon = this.#client.configuration?.features.pigeon;
+    if (!pigeon?.enabled) return;
 
     let query = "";
     if (forceAnimation && this.contentType === "image/gif") {
       query = "/original";
     }
 
-    return `${autumn.url}/${this.tag}/${this.id}${query}`;
+    return `${pigeon.url}/${this.tag}/${this.id}${query}`;
   }
 }

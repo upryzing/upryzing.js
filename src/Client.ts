@@ -1,9 +1,9 @@
 import type { Accessor, Setter } from "solid-js";
 import { batch, createSignal } from "solid-js";
 
+import { API } from "@upryzing/api";
+import type { DataLogin, RevoltConfig, Role } from "@upryzing/api";
 import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
-import { API } from "stoat-api";
-import type { DataLogin, RevoltConfig, Role } from "stoat-api";
 
 import type { Channel } from "./classes/Channel.js";
 import type { Emoji } from "./classes/Emoji.js";
@@ -162,7 +162,7 @@ export type ClientOptions = Partial<EventClientOptions> & {
 };
 
 /**
- * Stoat.js Clients
+ * Upryzing.js Clients
  */
 export class Client extends AsyncEventEmitter<Events> {
   readonly account;
@@ -193,13 +193,13 @@ export class Client extends AsyncEventEmitter<Events> {
   #reconnectTimeout: number | undefined;
 
   /**
-   * Create Stoat.js Client
+   * Create Upryzing.js Client
    */
   constructor(options?: Partial<ClientOptions>, configuration?: RevoltConfig) {
     super();
 
     this.options = {
-      baseURL: "https://stoat.chat/api",
+      baseURL: "https://web.upryzing.chat/api",
       partials: false,
       eagerFetching: true,
       syncUnreads: false,
@@ -279,7 +279,7 @@ export class Client extends AsyncEventEmitter<Events> {
             this.#reconnectTimeout = setTimeout(
               () => this.connect(),
               this.options.retryDelayFunction(this.connectionFailureCount()) *
-              1e3,
+                1e3,
             ) as never;
 
             this.#setConnectionFailureCount((count) => count + 1);
@@ -317,7 +317,7 @@ export class Client extends AsyncEventEmitter<Events> {
     this.events.disconnect();
     this.#setReady(false);
     this.events.connect(
-      this.configuration?.ws ?? "wss://stoat.chat/events",
+      this.configuration?.ws ?? "wss://web.upryzing.chat/events",
       typeof this.#session === "string" ? this.#session : this.#session!.token,
     );
   }
@@ -407,13 +407,13 @@ export class Client extends AsyncEventEmitter<Events> {
   }
 
   /**
-   * Proxy a file through January.
+   * Proxy a file through Dove.
    * @param url URL to proxy
    * @returns Proxied media URL
    */
   proxyFile(url: string): string | undefined {
-    if (this.configuration?.features.january.enabled) {
-      return `${this.configuration.features.january.url}/proxy?url=${encodeURIComponent(
+    if (this.configuration?.features.dove.enabled) {
+      return `${this.configuration.features.dove.url}/proxy?url=${encodeURIComponent(
         url,
       )}`;
     } else {
@@ -437,7 +437,7 @@ export class Client extends AsyncEventEmitter<Events> {
 
     const [key, value] = this.authenticationHeader;
     const data: { id: string } = await fetch(
-      `${uploadUrl ?? this.configuration?.features.autumn.url}/${tag}`,
+      `${uploadUrl ?? this.configuration?.features.pigeon.url}/${tag}`,
       {
         method: "POST",
         body,

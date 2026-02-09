@@ -1,9 +1,9 @@
 import type { Accessor, Setter } from "solid-js";
 import { createSignal } from "solid-js";
 
+import type { Error } from "@upryzing/api";
 import { AsyncEventEmitter } from "@vladfrangu/async_event_emitter";
 import { JSONParse, JSONStringify } from "json-with-bigint";
-import type { Error } from "stoat-api";
 
 import type { ProtocolV1 } from "./v1.js";
 
@@ -95,7 +95,7 @@ export class EventClient<
   #connectTimeoutReference: number | undefined;
 
   #lastError: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    { type: "socket"; data: any } | { type: "revolt"; data: Error } | undefined;
+  { type: "socket"; data: any } | { type: "revolt"; data: Error } | undefined;
 
   /**
    * Create a new event client.
@@ -291,14 +291,14 @@ export class EventClient<
    */
   get lastError():
     | {
-      type: "socket";
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      data: any;
-    }
+        type: "socket";
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        data: any;
+      }
     | {
-      type: "revolt";
-      data: Error;
-    }
+        type: "revolt";
+        data: Error;
+      }
     | undefined {
     return this.#lastError;
   }

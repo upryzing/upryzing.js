@@ -1,4 +1,4 @@
-import type { User as APIUser, DataEditUser, Presence } from "stoat-api";
+import type { User as APIUser, DataEditUser, Presence } from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import type { UserCollection } from "../collections/UserCollection.js";

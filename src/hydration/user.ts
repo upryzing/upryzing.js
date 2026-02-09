@@ -3,7 +3,7 @@ import type {
   BotInformation,
   RelationshipStatus,
   UserStatus,
-} from "stoat-api";
+} from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 import { File } from "../classes/File.js";

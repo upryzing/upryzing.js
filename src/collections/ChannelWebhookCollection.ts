@@ -1,4 +1,4 @@
-import type { Webhook } from "stoat-api";
+import type { Webhook } from "@upryzing/api";
 
 import { ChannelWebhook } from "../classes/ChannelWebhook.js";
 import type { HydratedChannelWebhook } from "../hydration/channelWebhook.js";

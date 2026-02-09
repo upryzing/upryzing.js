@@ -1,4 +1,4 @@
-import type { Channel as APIChannel } from "stoat-api";
+import type { Channel as APIChannel } from "@upryzing/api";
 
 import { Channel } from "../classes/Channel.js";
 import { User } from "../classes/User.js";

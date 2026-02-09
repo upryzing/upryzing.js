@@ -1,4 +1,4 @@
-export * as API from "stoat-api";
+export * as API from "@upryzing/api";
 export { Client } from "./Client.js";
 export type { ClientOptions, Session as PrivateSession } from "./Client.js";
 export * from "./classes/index.js";
@@ -8,4 +8,4 @@ export { BotFlags } from "./hydration/bot.js";
 export { ServerFlags } from "./hydration/server.js";
 export { UserBadges, UserFlags } from "./hydration/user.js";
 export * from "./lib/regex.js";
-export * from './permissions/definitions.js';
+export * from "./permissions/definitions.js";

@@ -6,7 +6,7 @@ import type {
   DataEditMessage,
   DataMessageSend,
   Masquerade,
-} from "stoat-api";
+} from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import type { Client } from "../Client.js";

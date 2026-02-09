@@ -1,4 +1,4 @@
-import { DataEditWebhook } from "stoat-api";
+import { DataEditWebhook } from "@upryzing/api";
 
 import type { ChannelWebhookCollection } from "../collections/ChannelWebhookCollection.js";
 import { hydrate } from "../hydration/index.js";

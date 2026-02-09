@@ -4,7 +4,7 @@
 
 with pkgs;
 pkgs.mkShell {
-  name = "stoatEnv";
+  name = "upryzingEnv";
 
   buildInputs = [
     # Tools

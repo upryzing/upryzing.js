@@ -1,6 +1,6 @@
 import { batch } from "solid-js";
 
-import type { ChannelUnread as APIChannelUnread } from "stoat-api";
+import type { ChannelUnread as APIChannelUnread } from "@upryzing/api";
 
 import { ChannelUnread } from "../classes/ChannelUnread.js";
 import { Channel } from "../classes/index.js";

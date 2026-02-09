@@ -1,4 +1,4 @@
-import type { BannedUser as APIBannedUser } from "stoat-api";
+import type { BannedUser as APIBannedUser } from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 

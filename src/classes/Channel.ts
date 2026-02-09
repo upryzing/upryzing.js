@@ -12,8 +12,8 @@ import type {
   DataMessageSend,
   Invite,
   Override,
-} from "stoat-api";
-import type { APIRoutes } from "stoat-api";
+} from "@upryzing/api";
+import type { APIRoutes } from "@upryzing/api";
 import { decodeTime, ulid } from "ulid";
 
 import { ChannelCollection } from "../collections/index.js";
@@ -177,8 +177,8 @@ export class Channel {
   get recipient(): User | undefined {
     return this.type === "DirectMessage"
       ? this.recipients?.find(
-        (user) => user?.id !== this.#collection.client.user!.id,
-      )
+          (user) => user?.id !== this.#collection.client.user!.id,
+        )
       : undefined;
   }
 

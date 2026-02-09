@@ -4,7 +4,7 @@ import type {
   Server as APIServer,
   Channel,
   DataCreateServer,
-} from "stoat-api";
+} from "@upryzing/api";
 
 import { Server } from "../classes/Server.js";
 import type { HydratedServer } from "../hydration/server.js";

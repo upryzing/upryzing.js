@@ -2,7 +2,7 @@ import type {
   BannedUser as APIBannedUser,
   ServerBan as APIServerBan,
   MemberCompositeKey,
-} from "stoat-api";
+} from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 

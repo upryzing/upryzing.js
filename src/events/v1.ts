@@ -18,7 +18,7 @@ import type {
   Role,
   Server,
   User,
-} from "stoat-api";
+} from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 import { MessageEmbed } from "../classes/MessageEmbed.js";

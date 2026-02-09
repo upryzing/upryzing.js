@@ -1,4 +1,4 @@
-import type { Message as APIMessage } from "stoat-api";
+import type { Message as APIMessage } from "@upryzing/api";
 
 import { Message } from "../classes/Message.js";
 import type { HydratedMessage } from "../hydration/message.js";

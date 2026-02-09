@@ -15,7 +15,7 @@ import type {
   Override,
   OverrideField,
   Role,
-} from "stoat-api";
+} from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import type { ServerCollection } from "../collections/ServerCollection.js";
@@ -271,7 +271,7 @@ export class Server {
    */
   get orderedRoles(): {
     name: string;
-    permissions: { a: bigint, d: bigint };
+    permissions: { a: bigint; d: bigint };
     colour?: string | null;
     hoist?: boolean;
     rank?: number;
@@ -514,11 +514,12 @@ export class Server {
    */
   async kickUser(user: string | User | ServerMember): Promise<void> {
     return await this.#collection.client.api.delete(
-      `/servers/${this.id as ""}/members/${typeof user === "string"
-        ? user
-        : user instanceof User
-          ? user.id
-          : user.id.user
+      `/servers/${this.id as ""}/members/${
+        typeof user === "string"
+          ? user
+          : user instanceof User
+            ? user.id
+            : user.id.user
       }`,
     );
   }
@@ -722,7 +723,8 @@ export class Server {
     query: string,
   ): Promise<{ members: ServerMember[]; users: User[] }> {
     const data = (await this.#collection.client.api.get(
-      `/servers/${this.id as ""
+      `/servers/${
+        this.id as ""
       }/members_experimental_query?experimental_api=true&query=${encodeURIComponent(
         query,
       )}` as never,
@@ -740,15 +742,15 @@ export class Server {
 
   /**
    * Create an emoji on the server
-   * @param autumnId Autumn Id
+   * @param pigeonId Pigeon Id
    * @param options Options
    */
   async createEmoji(
-    autumnId: string,
+    pigeonId: string,
     options: Omit<DataCreateEmoji, "parent">,
   ): Promise<Emoji> {
     const emoji = await this.#collection.client.api.put(
-      `/custom/emoji/${autumnId as ""}`,
+      `/custom/emoji/${pigeonId as ""}`,
       {
         parent: {
           type: "Server",

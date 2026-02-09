@@ -1,4 +1,4 @@
-import type { EmojiParent } from "stoat-api";
+import type { EmojiParent } from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import type { EmojiCollection } from "../collections/EmojiCollection.js";
@@ -85,7 +85,7 @@ export class Emoji {
    * URL to emoji
    */
   get url() {
-    return `${this.#collection.client.configuration?.features.autumn.url}/emojis/${
+    return `${this.#collection.client.configuration?.features.pigeon.url}/emojis/${
       this.id
     }`;
   }

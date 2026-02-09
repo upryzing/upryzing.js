@@ -1,4 +1,4 @@
-import type { DataEditBot } from "stoat-api";
+import type { DataEditBot } from "@upryzing/api";
 import { decodeTime } from "ulid";
 
 import type { BotCollection } from "../collections/BotCollection.js";

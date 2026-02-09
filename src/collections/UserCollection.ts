@@ -1,4 +1,4 @@
-import type { User as APIUser } from "stoat-api";
+import type { User as APIUser } from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 import { User } from "../classes/User.js";

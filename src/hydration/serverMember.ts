@@ -1,4 +1,4 @@
-import type { Member as APIMember, MemberCompositeKey } from "stoat-api";
+import type { Member as APIMember, MemberCompositeKey } from "@upryzing/api";
 
 import type { Client } from "../Client.js";
 import { File } from "../classes/File.js";

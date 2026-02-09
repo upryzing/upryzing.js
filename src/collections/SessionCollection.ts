@@ -1,6 +1,6 @@
 import { batch } from "solid-js";
 
-import type { SessionInfo } from "stoat-api";
+import type { SessionInfo } from "@upryzing/api";
 
 import { Session } from "../classes/Session.js";
 import type { HydratedSession } from "../hydration/session.js";

@@ -1,4 +1,4 @@
-import type { Emoji as APIEmoji } from "stoat-api";
+import type { Emoji as APIEmoji } from "@upryzing/api";
 
 import { Emoji } from "../classes/Emoji.js";
 import type { HydratedEmoji } from "../hydration/emoji.js";

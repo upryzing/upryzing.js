@@ -1,4 +1,4 @@
-import type { Emoji as APIEmoji, EmojiParent } from "stoat-api";
+import type { Emoji as APIEmoji, EmojiParent } from "@upryzing/api";
 
 import type { Merge } from "../lib/merge.js";
 
