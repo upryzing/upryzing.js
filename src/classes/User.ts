@@ -72,6 +72,13 @@ export class User {
   }
 
   /**
+   * User pronouns
+   */
+  get pronouns() {
+    return this.#collection.getUnderlyingObject(this.id).pronouns;
+  }
+
+  /**
    * Avatar
    */
   get avatar(): File | undefined {

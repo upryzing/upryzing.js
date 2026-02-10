@@ -15,6 +15,7 @@ export type HydratedUser = {
   username: string;
   discriminator: string;
   displayName?: string;
+  pronouns?: string[];
   relationship: RelationshipStatus;
   relations: null;
 
@@ -39,6 +40,7 @@ export const userHydration: Hydrate<APIUser, HydratedUser> = {
     username: (user) => user.username,
     discriminator: (user) => user.discriminator,
     displayName: (user) => user.display_name!,
+    pronouns: (user) => user.pronouns!,
     relationship: (user) => user.relationship!,
     relations: () => null,
 
